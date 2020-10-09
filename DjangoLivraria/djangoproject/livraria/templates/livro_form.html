@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %} {# Carregando o bootstrap3 ao formulário #}
+
+{%block title%}
+Cadastro de livros
+{% endblock title%}
+
+{% block tituloPagina %}
+Cadastro de livros
+{% endblock tituloPagina %}
+
+{%block content%}
+
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %} {# Bootstrap3 #}
+    <button type="submit" class="btn btn-primary">
+        Salvar
+    </button>
+</form>
+
+{%endblock content%}
